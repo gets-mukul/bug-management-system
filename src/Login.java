@@ -37,61 +37,50 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		// Connect to mysql and verify username password
+		
 		String email=request.getParameter("email");
 		String password=request.getParameter("password");
 		try {
-			
 			Class.forName("com.mysql.jdbc.Driver");
-		 
-		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/dms", "root", "root"); // gets a new connection
-		
-		java.sql.Statement stmt=c.createStatement();
-		String sql="select name from dms.login_master where email = ' " +email+ " ' and password = ' "+password+ " '";
-		System.out.println(sql);
-		ResultSet rs= stmt.executeQuery(sql);
-		while(rs.first()) {
-		String name = rs.getString("name");
-		System.out.println(name);
-		}
-		
-	/*	
-	 * where email = ' " +email+ " ' and password = ' "+password+ " '
-	 * 
-		PreparedStatement ps = c.prepareStatement("select email,password from login_master where email=? and password=?");
+		 // loads driver
+		Connection c = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dms", "root", "root"); // gets a new connection
+ 
+		PreparedStatement ps = (PreparedStatement) c.prepareStatement("select * from login_master where email=? and password=?");
 		ps.setString(1, email);
 		ps.setString(2, password);
- */
-		//ResultSet rs = ps.executeQuery();
-		System.out.println(rs);
+ 
+		ResultSet rs = ps.executeQuery();
+		
 		if(rs.next()) {
-			/*String user_type = rs.getString("user_type");
-			System.out.println(user_type);
-			if(user_type==ProjectConstants.TESTER)
-				response.sendRedirect("register.jsp");
-			
-			else if(user_type==ProjectConstants.DEVELOPER)
-				response.sendRedirect("developer.jsp");
-			
-			else if(user_type==ProjectConstants.ADMIN)
-				response.sendRedirect("index.jsp");*/
-			
+			Integer id = rs.getInt("id");
+			String user_type = rs.getString("user_type");
+			HttpSession session=request.getSession();  
+	        session.setAttribute("id", id);
+	        
+	        if(user_type.equalsIgnoreCase(ProjectConstants.ADMIN)) {
+	        	response.sendRedirect("index.jsp");
+	        }
+	        else if(user_type.equalsIgnoreCase(ProjectConstants.TESTER)) {
+	        	response.sendRedirect("tester.jsp");
+	        }
+	        else if(user_type.equalsIgnoreCase(ProjectConstants.DEVELOPER)) {
+	        	response.sendRedirect("developer.jsp");
+	        }
 		}
-		
-		 HttpSession session=request.getSession();  
-	        session.setAttribute("id",request.getParameter("id"));  
-	        String id = request.getParameter("id");
-	        System.out.println(id);
+		else {
+			response.sendRedirect("unauthorised.jsp");
 		}
-		
-		 catch (Exception e) {
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			((Throwable) e).printStackTrace();
 		}
+		
+		
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
