@@ -52,23 +52,23 @@
             <div class="alert alert-info">
                 Register yourself for successful Login.
             </div>
-            <form class="form-horizontal" action="index.jsp" method="post">
+            <form class="form-horizontal" action="user_registration" method="post">
                 <fieldset>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-                        <input type="text" class="form-control" placeholder="Name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                     </div>
                     <div class="clearfix"></div><br>
 
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                     </div>
                     <div class="clearfix"></div><br>
                     
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                     </div>
                     <div class="clearfix"></div>
 
@@ -78,7 +78,7 @@
                     <div class="clearfix"></div>
 
                     <p class="center col-md-5">
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <button type="submit" id="submit" class="btn btn-primary">Register</button>
                     </p>
                 </fieldset>
             </form>
@@ -124,6 +124,14 @@
 <!-- application script for Charisma demo -->
 <script src="js/charisma.js"></script>
 
+<script>
+$('#submit').click(function(){
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+alert(name+','+email+','+password);
+});
+</script>
 
 </body>
 </html>
