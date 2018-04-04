@@ -52,17 +52,17 @@
             <div class="alert alert-info">
                 Please login with your Email and Password.
             </div>
-            <form class="form-horizontal" action="index.jsp" method="post">
+            <form class="form-horizontal" action="Login" method="post">
                 <fieldset>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
                     </div>
                     <div class="clearfix"></div><br>
 
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
                     <div class="clearfix"></div>
 

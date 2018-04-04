@@ -125,12 +125,7 @@
 <script src="js/charisma.js"></script>
 
 <script>
-$('#submit').click(function(){
-var name = document.getElementById("name").value;
-var email = document.getElementById("email").value;
-var password = document.getElementById("password").value;
-alert(name+','+email+','+password);
-});
+
 </script>
 
 </body>

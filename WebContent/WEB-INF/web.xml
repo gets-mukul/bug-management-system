@@ -2,14 +2,13 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>bugmanagementsystem</display-name>
   <servlet>
-    <servlet-name>one</servlet-name>
+    <servlet-name>login</servlet-name>
     <servlet-class>Login</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>one</servlet-name>
+    <servlet-name>login</servlet-name>
     <url-pattern>/loginpage</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>register</servlet-name>
     <servlet-class>Registration</servlet-class>
@@ -18,13 +17,15 @@
     <servlet-name>register</servlet-name>
     <url-pattern>/user_registration</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <servlet-name>auth</servlet-name>
+    <servlet-class>Authentication</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>auth</servlet-name>
+    <url-pattern>/authentication</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
