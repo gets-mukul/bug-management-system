@@ -6,27 +6,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
 
-    <link href="../css/charisma-app.css" rel="stylesheet">
-    <link href='../css/fullcalendar.css' rel='stylesheet'>
-    <link href='../css/fullcalendar.print.css' rel='stylesheet' media='print'>
-    <link href='../css/chosen.min.css' rel='stylesheet'>
-    <link href='../css/colorbox.css' rel='stylesheet'>
-    <link href='../css/responsive-tables.css' rel='stylesheet'>
-    <link href='../css/bootstrap-tour.min.css' rel='stylesheet'>
-    <link href='../css/jquery.noty.css' rel='stylesheet'>
-    <link href='../css/noty_theme_default.css' rel='stylesheet'>
-    <link href='../css/elfinder.min.css' rel='stylesheet'>
-    <link href='../css/elfinder.theme.css' rel='stylesheet'>
-    <link href='../css/jquery.iphone.toggle.css' rel='stylesheet'>
-    <link href='../css/uploadify.css' rel='stylesheet'>
-    <link href='../css/animate.min.css' rel='stylesheet'>
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='css/fullcalendar.css' rel='stylesheet'>
+    <link href='css/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='css/chosen.min.css' rel='stylesheet'>
+    <link href='css/colorbox.css' rel='stylesheet'>
+    <link href='css/responsive-tables.css' rel='stylesheet'>
+    <link href='css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
 
     <!-- jQuery -->
     <script src="jquery/jquery.min.js"></script>
 
     <!-- The fav icon -->
     <link rel="shortcut icon" href="img/favicon.ico">
-<title>Insert title here</title>
+<title> BMS | Dashboard</title>
 </head>
 <body>
 
