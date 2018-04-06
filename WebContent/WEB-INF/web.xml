@@ -25,6 +25,11 @@
     <servlet-name>auth</servlet-name>
     <url-pattern>/authentication</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  
+  
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
