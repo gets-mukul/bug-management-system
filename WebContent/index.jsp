@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,7 +36,9 @@
 
 <!-- The fav icon -->
 <link rel="shortcut icon" href="img/favicon.ico">
-<title>BMS | Dashboard</title>
+
+<title>BMS | Admin Dashboard</title>
+
 </head>
 <body>
 
@@ -52,17 +54,17 @@
 			<div class="btn-group pull-right">
 				<button class="btn btn-default">
 					<form>
-						<i class="glyphicon glyphicon-user"></i><span> Logout</span>
+
+						<a href = "login.jsp"><i class="glyphicon glyphicon-user"></i><span> Logout</span></a>
 					</form>
 				</button>
 
 			</div>
-			<!-- user dropdown ends -->
 
 			<!-- theme selector starts -->
 			<div class="btn-group pull-right theme-container animated tada">
-
-				<ul class="dropdown-menu" id="themes">
+			<ul class="collapse navbar-collapse nav navbar-nav top-menu">
+<ul class="dropdown-menu" id="themes">
 					<li><a data-value="classic" href="#"><i class="whitespace"></i>
 							Classic</a></li>
 					<li><a data-value="cerulean" href="#"><i
@@ -84,9 +86,6 @@
 				</ul>
 			</div>
 			<!-- theme selector ends -->
-
-			<ul class="collapse navbar-collapse nav navbar-nav top-menu">
-
 				<li>
 					<form>
 						<input placeholder="Search"
@@ -96,23 +95,65 @@
 				</li>
 			</ul>
 
+			<ul class="collapse navbar-collapse nav navbar-nav top-menu">
+		</div>
+	</div>
+	<!-- topbar ends -->
+	<div class="ch-container">
+		<div class="row">
+			<div id="content" class="col-lg-12 col-sm-12">
+				<!-- content starts -->
+				<div>
+					<ul class="breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Dashboard</a></li>
+					</ul>
+				</div>
+
+				<div class="row">
+					<div class="box col-md-12">
+						<div class="box-inner">
+							<div class="box-header well" style="height: 41px;"
+								data-original-title="">
 		</div>
 	</div>
 	<!-- topbar ends -->
 	<div class="ch-container">
 		<div class="row">
 
+								<div class="box-icon">
+									<button class="btn btn-primary btn-sm">Add Bug</button>
+									<button class="btn btn-success btn-sm">Add Employee</button>
+								</div>
+							</div>
+							<div class="box-content">
+								<table
+									class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+									<thead>
+										<tr>
+											<th>Id</th>
+											<th>Bug</th>
+											<th>Defect Severity</th>
+											<th>Defect Status</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>David R</td>
+											<td class="center">2012/01/01</td>
+											<td class="center">Member</td>
+											<td class="center"><span
+												class="label-success label label-default">Active</span></td>
+											<td class="center"><a class="btn btn-success" href="#">
+													<i class="glyphicon glyphicon-zoom-in icon-white"></i> View
+											</a> <a class="btn btn-info" href="#"> <i
+													class="glyphicon glyphicon-edit icon-white"></i> Edit
+											</a> <a class="btn btn-danger" href="#"> <i
+													class="glyphicon glyphicon-trash icon-white"></i> Delete
+											</a></td>
+										</tr>
 
-			<noscript>
-				<div class="alert alert-block col-md-12">
-					<h4 class="alert-heading">Warning!</h4>
-
-					<p>
-						You need to have <a href="http://en.wikipedia.org/wiki/JavaScript"
-							target="_blank">JavaScript</a> enabled to use this site.
-					</p>
-				</div>
-			</noscript>
 
 			<div id="content" class="col-lg-12 col-sm-12">
 				<!-- content starts -->
@@ -245,9 +286,30 @@
 				</div>
 				<!--/row-->
 
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
 
 
+				</div>
+			</div>
+		</div>
+		
 
+		<hr>
+
+		<footer class="row">
+		<p class="col-md-9 col-sm-9 col-xs-12 copyright">
+			&copy; <a href="http://usman.it" target="_blank">Muhammad Usman</a>
+			2012 - 2015
+		</p>
+
+		<p class="col-md-3 col-sm-3 col-xs-12 powered-by">
+			Powered by: <a href="http://usman.it/free-responsive-admin-template">Charisma</a>
+		</p>
+		</footer>
 
 
 				<!--/row-->
@@ -255,13 +317,17 @@
 			</div>
 			<!--/#content.col-md-0-->
 		</div>
-		<!--/fluid-row-->
 
-		<!-- Ad, you can remove it -->
-
-		<!-- Ad ends -->
+	<script src="js/bootstrap.min.js"></script>
 
 		<hr>
+	<!-- library for cookie management -->
+	<script src="js/jquery.cookie.js"></script>
+	<!-- calender plugin -->
+	<script src='../js/moment.min.js'></script>
+	<script src='../js/fullcalendar.min.js'></script>
+	<!-- data table plugin -->
+	<script src='js/jquery.dataTables.min.js'></script>
 
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 			aria-labelledby="myModalLabel" aria-hidden="true">
